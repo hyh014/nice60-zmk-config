@@ -13,6 +13,24 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+	behaviors {
+        spaceFn: spaceFn_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACEFN";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+           bindings = <
+	&GRAVE  &kp F1    &kp F2    &kp F3  &kp F4  &kp F5 &kp F6 &kp F7   &kp F8     &kp F9      &kp F10  &kp F11 &kp F12  &trans
+	&trans  &kp ESC    &trans    &trans  &trans  &trans &trans &trans   &kp UP     &trans      &kp K_PLAY_PAUSE   &kp K_VOLUME_UP  &kp K_VOLUME_DOWN   &trans 
+	&trans  &trans    &trans    &trans  &trans  &trans &trans &kp LEFT &kp DOWN   &kp RIGHT   &trans   &trans  &trans   
+	&kp LSHFT  &trans    &trans    &trans   &trans          &trans          &trans          &trans          &GRAVE   &TILDE   &trans              &kp RSHFT
+	&trans  &trans   &trans                            &trans                                      &trans      &trans      &trans               &trans
+			>;
+        };
+    };
+    
 	keymap {
 		compatible = "zmk,keymap";
 		
