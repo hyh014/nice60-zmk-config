@@ -50,19 +50,19 @@ behaviors {
 		};
 		
 		space_fn_layer {
-// ------------------------------------------------------------------------------------------
-// |  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |      |
-// |   |    |    |    |    |    |    |    |    |    |    |    |    |     |
-// |   |    |    |    |    |    |    |    |    |    |    |    |         |
-// |    |    |    |    |    |    |    |    |    |    |    |             |
-// |    |    |    |                          |    |    |   |    |
-// ------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
+// |  ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10      |  F11     |  F12     | BKSP |
+// |       |      |  UP  |      |      |      |      |      |  UP  |      |   PAUSE   |  VOL UP  |  VOL DN  |      |
+// |       |  LT  |  DN  |  RT  |      |      |      |  LT  |  DN  |  RT  |           |          |                 |
+// | SHIFT |      |      |      |      |  SPC |      |      |      |   `  |    ~      |          SHIFT             |
+// |       |      |      |                                                |           |          |          |      |
+// --------------------------------------------------------------------------------------------------
 			bindings = <
-	&trans  &kp F1   &kp F2    &kp F3   &kp F4 &kp F5  &kp F6  &kp F7   &kp F8   &kp F9   &kp F10  &kp F11 &kp F12  &trans
-	&trans  &trans   &trans    &trans   &trans &trans  &trans  &trans   &trans   &trans   &trans   &trans  &trans   &trans 
-	&trans  &trans   &trans    &trans   &trans &trans  &trans  &trans   &trans   &trans   &trans   &trans           &trans
-	&trans  &trans   &trans    &trans   &trans &trans  &trans  &trans   &trans   &trans   &trans                    &trans
-	&trans  &trans   &trans                            &trans                             &trans    &trans  &trans   &trans
+	&gresc    &kp F1   &kp F2    &kp F3   &kp F4    &kp F5     &kp F6  &kp F7   &kp F8   &kp F9     &kp F10   &kp F11       &kp F12        &kp BSPC
+	&trans    &kp UP   &trans    &trans   &trans    &trans     &trans  &trans   &kp UP   &trans     &kp C_PP  &kp C_VOL_UP  &kp C_VOL_DN   &kp C_NEXT 
+	&kp LEFT  &kp DOWN &kp RIGHT &trans   &trans    &trans     &trans  &kp LEFT &kp DOWN &kp RIGHT  &trans    &trans                       &trans
+	&kp LSHFT &trans   &trans    &trans   &trans    &kp SPACE  &trans  &trans   &trans   &kp GRAVE  &kp TILDE                             &kp RSHFT
+	&trans    &trans   &trans                            &trans                                     &trans    &trans        &trans         &trans
 			>;
 		};
 
