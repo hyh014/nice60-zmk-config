@@ -50,6 +50,7 @@ jobs:
             SHIELD_ARG=
             ARTIFACT_NAME="${{ matrix.board }}-zmk"
           fi
+          
           echo ::set-output name=shield-arg::${SHIELD_ARG}
           echo ::set-output name=artifact-name::${ARTIFACT_NAME}
       - name: Build (west build)
